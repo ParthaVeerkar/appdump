@@ -34,8 +34,8 @@ var n = {
 
     // setting cell colors
     for(i=0;i<n.SNL_COUNT;i++) {
-      n.cells[n.chutes[i]].classList += " snk"
-      n.cells[n.ladders[i]].classList += " ldr"
+      n.cells[n.chutes[i]].className += " snk";
+      n.cells[n.ladders[i]].className += " ldr";
     }
 
     // creating players
@@ -65,7 +65,7 @@ var n = {
     n.rollButton.disabled = true;
     n.winMessage.innerHTML = 'P' + playerId + ' won!<br> Refresh page to restart';
     console.log("Total moves: " + n.moveCount);
-    n.winMessage.style = "display:block";
+    n.winMessage.setAttribute('style', "display:block");
   },
 
   addToLog : function(text) {
@@ -124,9 +124,9 @@ var n = {
     }
     n.cells[cellId].playersInCell.push(n.players[playerId].id);
     if (n.cells[cellId].playersInCell.length > 1) {
-      n.cells[cellId].style = n.multiplePlayerCellStyle;
+      n.cells[cellId].setAttribute('style', n.multiplePlayerCellStyle);
     } else {
-      n.cells[cellId].style = "background:" + n.players[playerId].color;
+      n.cells[cellId].setAttribute('style', "background:" + n.players[playerId].color);
     }
     n.updateCell(cellId);
   },
@@ -140,11 +140,11 @@ var n = {
           n.cells[cellId].playersInCell.indexOf(n.players[playerId].id), 1
       );
       if (n.cells[cellId].playersInCell.length == 1) {
-        n.cells[cellId].style = "background:" + n.players[n.cells[cellId].playersInCell[0]].color;
+        n.cells[cellId].setAttribute('style', "background:" + n.players[n.cells[cellId].playersInCell[0]].color);
       } else if (n.cells[cellId].playersInCell.length > 1) {
-        n.cells[cellId].style = n.multiplePlayerCellStyle;
+        n.cells[cellId].setAttribute('style', n.multiplePlayerCellStyle);
       } else {
-        n.cells[cellId].style = "";
+        n.cells[cellId].setAttribute('style', "");
       }
       n.updateCell(cellId);
     }
@@ -197,6 +197,6 @@ document.getElementById('startButton').addEventListener('click', function() {
     numberOfPlayers = 2;
   }
   n.init(document.getElementById('numberOfPlayers').value);
-  document.getElementById('startingSettings').style = "display:none;";
-  document.getElementById('gameArea').style = "";
+  document.getElementById('startingSettings').setAttribute('style', "display:none;");
+  document.getElementById('gameArea').setAttribute('style', "");
 });
