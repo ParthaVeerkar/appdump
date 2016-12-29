@@ -1,0 +1,160 @@
+<html>
+  <head>
+    <title>Blind chutes n ladders</title>
+    <link rel="stylesheet" href="chutesandladders.css">
+    <style></style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="startingSettings">
+        <div class="instructions">
+          <h3>What is this</h3>
+          This is a game of chutes and ladders with one change: The chutes and ladders will send you to random locations instead of fixed ones. <br><br>The tiles with green borders are ladders. If you land on a ladder it will send you to a random tile ahead. <br><br>The tiles with the red borders are chutes. If you land on a chute, it will send to a random tile behind. <br><br>
+          <h3>How to play</h3>
+          Select the number of players below and click start. <br><br>Click on the ‘Roll P’ button to roll the dice and start. <br><br>Click the same button again to roll for the next player.
+        </div>
+        <br><br>
+        <div class="instructions">
+          Number of players:
+          <select id="numberOfPlayers">
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+          </select>
+          <br><button id="startButton" class="btns"> Start </button>
+        </div>
+      </div>
+      <div id="gameArea" style="display:none">
+        <table id="tab">
+          <tr>
+            <td class="cell" id="100">100</td>
+            <td class="cell" id="99">99</td>
+            <td class="cell" id="98">98</td>
+            <td class="cell" id="97">97</td>
+            <td class="cell" id="96">96</td>
+            <td class="cell" id="95">95</td>
+            <td class="cell" id="94">94</td>
+            <td class="cell" id="93">93</td>
+            <td class="cell" id="92">92</td>
+            <td class="cell" id="91">91</td>
+          </tr>
+          <tr>
+            <td class="cell" id="81">81</td>
+            <td class="cell" id="82">82</td>
+            <td class="cell" id="83">83</td>
+            <td class="cell" id="84">84</td>
+            <td class="cell" id="85">85</td>
+            <td class="cell" id="86">86</td>
+            <td class="cell" id="87">87</td>
+            <td class="cell" id="88">88</td>
+            <td class="cell" id="89">89</td>
+            <td class="cell" id="90">90</td>
+          </tr>
+          <tr>
+            <td class="cell" id="80">80</td>
+            <td class="cell" id="79">79</td>
+            <td class="cell" id="78">78</td>
+            <td class="cell" id="77">77</td>
+            <td class="cell" id="76">76</td>
+            <td class="cell" id="75">75</td>
+            <td class="cell" id="74">74</td>
+            <td class="cell" id="73">73</td>
+            <td class="cell" id="72">72</td>
+            <td class="cell" id="71">71</td>
+          </tr>
+          <tr>
+            <td class="cell" id="61">61</td>
+            <td class="cell" id="62">62</td>
+            <td class="cell" id="63">63</td>
+            <td class="cell" id="64">64</td>
+            <td class="cell" id="65">65</td>
+            <td class="cell" id="66">66</td>
+            <td class="cell" id="67">67</td>
+            <td class="cell" id="68">68</td>
+            <td class="cell" id="69">69</td>
+            <td class="cell" id="70">70</td>
+          </tr>
+          <tr>
+            <td class="cell" id="60">60</td>
+            <td class="cell" id="59">59</td>
+            <td class="cell" id="58">58</td>
+            <td class="cell" id="57">57</td>
+            <td class="cell" id="56">56</td>
+            <td class="cell" id="55">55</td>
+            <td class="cell" id="54">54</td>
+            <td class="cell" id="53">53</td>
+            <td class="cell" id="52">52</td>
+            <td class="cell" id="51">51</td>
+          </tr>
+          <tr>
+            <td class="cell" id="41">41</td>
+            <td class="cell" id="42">42</td>
+            <td class="cell" id="43">43</td>
+            <td class="cell" id="44">44</td>
+            <td class="cell" id="45">45</td>
+            <td class="cell" id="46">46</td>
+            <td class="cell" id="47">47</td>
+            <td class="cell" id="48">48</td>
+            <td class="cell" id="49">49</td>
+            <td class="cell" id="50">50</td>
+          </tr>
+          <tr>
+            <td class="cell" id="40">40</td>
+            <td class="cell" id="39">39</td>
+            <td class="cell" id="38">38</td>
+            <td class="cell" id="37">37</td>
+            <td class="cell" id="36">36</td>
+            <td class="cell" id="35">35</td>
+            <td class="cell" id="34">34</td>
+            <td class="cell" id="33">33</td>
+            <td class="cell" id="32">32</td>
+            <td class="cell" id="31">31</td>
+          </tr>
+          <tr>
+            <td class="cell" id="21">21</td>
+            <td class="cell" id="22">22</td>
+            <td class="cell" id="23">23</td>
+            <td class="cell" id="24">24</td>
+            <td class="cell" id="25">25</td>
+            <td class="cell" id="26">26</td>
+            <td class="cell" id="27">27</td>
+            <td class="cell" id="28">28</td>
+            <td class="cell" id="29">29</td>
+            <td class="cell" id="30">30</td>
+          </tr>
+          <tr>
+            <td class="cell" id="20">20</td>
+            <td class="cell" id="19">19</td>
+            <td class="cell" id="18">18</td>
+            <td class="cell" id="17">17</td>
+            <td class="cell" id="16">16</td>
+            <td class="cell" id="15">15</td>
+            <td class="cell" id="14">14</td>
+            <td class="cell" id="13">13</td>
+            <td class="cell" id="12">12</td>
+            <td class="cell" id="11">11</td>
+          </tr>
+          <tr>
+            <td class="cell" id="1">1</td>
+            <td class="cell" id="2">2</td>
+            <td class="cell" id="3">3</td>
+            <td class="cell" id="4">4</td>
+            <td class="cell" id="5">5</td>
+            <td class="cell" id="6">6</td>
+            <td class="cell" id="7">7</td>
+            <td class="cell" id="8">8</td>
+            <td class="cell" id="9">9</td>
+            <td class="cell" id="10">10</td>
+          </tr>
+        </table>
+        <button id="roll" class="btns" onclick="n.rollDice();"></button><button id="autoPlay" class="btns" onclick="n.autoPlay();">Auto Play</button>
+        <div id="gameLog"></div>
+        <div id="winMessage" class="winMessage" style="display:none"></div>
+      </div>
+    </div>
+    <script src="chutesandladders.js"></script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+.cell,
+.winMessage,
+.wrapper {
+    text-align: center
+}
+.cell,
+.instructions {
+    display: inline-block
+}
+.cell {
+    width: 30px;
+    border-radius: 5px;
+    height: 30px;
+    line-height: 30px;
+    background: #fff;
+    margin: 2px;
+    word-wrap: break-word
+}
+.ldr,
+.snk {
+    width: 26px;
+    height: 26px;
+    line-height: 26px
+}
+.snk {
+    border: 2px solid red
+}
+.ldr {
+    border: 2px solid #4be64b
+}
+.winMessage {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    background: rgba(216, 216, 216, .9);
+    top: 0;
+    left: 0;
+    padding-top: 200px;
+    font-size: 50px
+}
+.btns {
+    margin: 10px 0;
+    padding: 8px;
+    background: #fff;
+    border-radius: 12px
+}
+#tab {
+    margin: auto;
+    padding: 4px;
+    border-radius: 10px;
+    background: #f7f7f7
+}
+#startingSettings {
+    margin-top: 10px
+}
+.instructions {
+    width: 400px;
+    text-align: left
+}
